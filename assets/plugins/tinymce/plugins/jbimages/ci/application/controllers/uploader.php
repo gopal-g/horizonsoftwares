@@ -113,7 +113,7 @@ class Uploader extends CI_Controller {
 				try{
 					// $awsUploader->uploadFile(result['file_temp'],  $result['file_name']);
 					$awsUploader->uploadFile($result['full_path'],  $result['file_name']);
-					// $awsUploader->uploadFile('/Users/macbookair/Projects/NairobiIO/nairobi.io/public/uploads/users/image/1/1461051288.png',  $result['file_name']);
+					// $awsUploader->uploadFile('/Users/macbookair/Projects/NairobiIO/nairobi.io/uploads/users/image/1/1461051288.png',  $result['file_name']);
 
 					file_put_contents($config['upload_path'].'/log.txt', date('Y-m-d H:i:s')."\n"
 							.__CLASS__.'@'.__FUNCTION__.':'.__LINE__."\n"

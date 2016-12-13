@@ -1418,8 +1418,8 @@ i.icon-color-home {
    }
    50% {
       border-color: transparent;
-      background-color: #00c2a9;
-      -webkit-box-shadow: 0 0 8px rgba(0,194,169, .5);
+      background-color: #32cd32;
+      -webkit-box-shadow: 0 0 8px rgba(50,205,50, .5);
    }
    100% {
       background-color: transparent;
@@ -1434,8 +1434,8 @@ i.icon-color-home {
    }
    50% {
       border-color: transparent;
-      background-color: #00c2a9;
-      box-shadow: 0 0 8px rgba(0,194,169, .5);
+      background-color: #32cd32;
+      box-shadow: 0 0 8px rgba(50,205,50, .5);
    }
    100% {
       background-color: transparent;

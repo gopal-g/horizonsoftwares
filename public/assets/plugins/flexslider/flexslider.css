@@ -93,7 +93,7 @@ html[xmlns] .slides { display: block; }
 
 .flex-direction-nav a:hover { 
 	border-color: transparent;
-	background-color: #00c2a9; 
+	background-color: #32cd32; 
 }
 
 .flex-direction-nav .flex-disabled {
@@ -104,7 +104,7 @@ html[xmlns] .slides { display: block; }
 
 .flex-direction-nav a:before {
 	display: block;
-	color: #00c2a9;
+	color: #32cd32;
 	font-size: 30px; 
 	font-family: 'fontello';
 	line-height: 68px;
@@ -212,7 +212,7 @@ html[xmlns] .slides { display: block; }
 		
 		.flex-control-thumbs .flex-active {
 			border-color: transparent;
-			background-color: #00c2a9;
+			background-color: #32cd32;
 		}
 		
 		.flex-control-thumbs .flex-active:before { color: #fff; }

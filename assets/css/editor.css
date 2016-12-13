@@ -62,7 +62,7 @@
 			margin-left: -5px;
 		}
 		button.submit {
-			background-color: #00c2a9;
+			background-color: #32cd32;
 			color: #fff;
 			margin-top: 25px;
 			padding: 8px;
@@ -72,7 +72,7 @@
 		}
 		button.submit:hover {
 			background-color: #fff;
-			color: #00c2a9;
+			color: #32cd32;
 		}
 
 

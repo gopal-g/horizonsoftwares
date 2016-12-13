@@ -132,8 +132,7 @@
 		(function() { // DON'T EDIT BELOW THIS LINE
 		var d = document, s = d.createElement('script');
 
-		// s.src = '//nairobiio.disqus.com/embed.js';
-		s.src = '//thedevslocalhost.disqus.com/embed.js';
+		s.src = '//horizonsoftwares.disqus.com/embed.js';
 
 		s.setAttribute('data-timestamp', +new Date());
 		(d.head || d.body).appendChild(s);
@@ -215,7 +214,7 @@
 				url = 'https://plus.google.com/share?url=' + url;
 				break;
 				case 'tw':
-				url = 'https://twitter.com/share?url=' + url + '&text=' + text + '&via=nairobiio';
+				url = 'https://twitter.com/share?url=' + url + '&text=' + text + '&via=h_softwares';
 				break;
 				case 'ln':
 				url = 'http://www.linkedin.com/shareArticle?mini=true&url=' + url;
@@ -228,6 +227,6 @@
 		// }
     </script>
 
-    <script id="dsq-count-scr" src="//nairobiio.disqus.com/count.js" async></script>
+    <script id="dsq-count-scr" src="//horizonsoftwares.disqus.com/count.js" async></script>
 
 @stop

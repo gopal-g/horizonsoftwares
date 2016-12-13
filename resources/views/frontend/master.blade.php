@@ -21,8 +21,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="We specialize in churning out superb web and mobile applications that express the missions of our clients most effectively and enable the products and services to be user-friendly and remarkably appealing.Whether its building, customizing or maintaining your company portfolio website, your exceptional mobile app, your uniquely intricate product or your mission critical software as a service, we can do that!And we have done it before">
+    <meta name="keywords" content="web designers in nairobi, smart web kenya nairobi, kenya, list of web designing companies, kenya web designers nairobi, kenya, web design company in kenya nairobi, kenya, web design and development in kenya, nairobi web designers nairobi, kenya, webscreations design nairobi, kenya, Website design and development, Domain Name registration, Website and email hosting, Search Engine optimization">
+    <meta name="author" content="Horizon Softwares">
 
     <!-- Favicons
     ================================================== -->
@@ -71,14 +72,14 @@
 <body data-spy="scroll" data-target="#navigation" class="home">
 
     <!-- Facebook like box -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=525227957610582&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=355421387962672";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
    
 
@@ -137,8 +138,8 @@
             regionStyle: {selected: {fill: '#B64645'},
                             initial: {fill: '#ddd'}},
 
-            markerStyle: {initial: {fill: '#00c2a9',
-                           stroke: '#00c2a9'}},
+            markerStyle: {initial: {fill: '#32cd32',
+                           stroke: '#32cd32'}},
             // markers: [{latLng: [51.51, -0.13], name: 'London'},
             //           {latLng: [40.71, -74.00], name: 'New York'},
             //           {latLng: [-1.2833, 36.8167], name: 'Nairobi'}],
@@ -163,6 +164,7 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/toastr/toastr.min.css') }}">
     <script src="{{ asset('assets/plugins/toastr/toastr.min.js') }}" type="text/javascript"></script>
     @include('includes.toastr')
+    @include('includes.ga')
     <!--[if lt IE 9]>
         <script src="assets/plugins/respond.js"></script>
     <![endif]-->

@@ -12,15 +12,15 @@ elixir(function(mix) {
      */
      .copy(
        'node_modules/font-awesome/fonts',
-       'public/build/fonts/font-awesome'
+       'build/fonts/font-awesome'
      )
      .copy(
        'node_modules/bootstrap-sass/assets/fonts/bootstrap',
-       'public/build/fonts/bootstrap'
+       'build/fonts/bootstrap'
      )
      .copy(
        'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-       'public/js/vendor/bootstrap'
+       'js/vendor/bootstrap'
      )
 
      /**
@@ -36,7 +36,7 @@ elixir(function(mix) {
       */
      .styles([
         'frontend/app.css'
-     ], 'public/css/frontend.css')
+     ], 'css/frontend.css')
 
      /**
       * Combine frontend scripts
@@ -45,7 +45,7 @@ elixir(function(mix) {
         'plugin/sweetalert/sweetalert.min.js',
         'plugins.js',
         'frontend/app.js'
-     ], 'public/js/frontend.js')
+     ], 'js/frontend.js')
 
      /**
       * Process backend SCSS stylesheets
@@ -61,7 +61,7 @@ elixir(function(mix) {
       */
      .styles([
          'backend/app.css'
-     ], 'public/css/backend.css')
+     ], 'css/backend.css')
 
      /**
       * Combine backend scripts
@@ -72,10 +72,10 @@ elixir(function(mix) {
          'backend/app.js',
          'backend/plugin/toastr/toastr.min.js',
          'backend/custom.js'
-     ], 'public/js/backend.js')
+     ], 'js/backend.js')
 
     /**
       * Apply version control
       */
-     .version(["public/css/frontend.css", "public/js/frontend.js", "public/css/backend.css", "public/js/backend.js"]);
+     .version(["css/frontend.css", "js/frontend.js", "css/backend.css", "js/backend.js"]);
 });

@@ -31,7 +31,7 @@ class BlogsController extends Controller
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function indexx()
 	{
 		$blogs = $this->blog->where(['public'=>1])->orderBy('created_at', 'desc')->paginate(10);
 		$tags = Tag::paginate(50);
@@ -39,8 +39,33 @@ class BlogsController extends Controller
 
 		$title = 'All Blogs';
 		// return compact('title', 'blogs', 'tags');
-		return view('blog.home', compact('title', 'blogs', 'tags'));
+		//return view('blog.home', compact('title', 'blogs', 'tags'));
+		return view('blog.home', compact('trending'));
 	}
+
+
+	public function index()
+	{
+		$trending = $this->blog
+			->where(['public'=>1])
+			->join('stars', 'blogs.id', '=', 'stars.blog_id')
+			->groupBy('stars.blog_id')
+			//->orderBy('aggregate', 'desc')
+			->paginate(10);
+
+		$tags = Tag::paginate(50);
+
+		// return $blogs;
+
+		$title = 'All Blogs';
+		// return compact('title', 'blogs', 'tags');
+		//return view('blog.home', compact('title', 'blogs', 'tags'));
+
+		return view('blog.home', compact('trending','tags','title'));
+	}
+
+	
+
 
 	/**
 	 * listing of blogs for admin

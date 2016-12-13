@@ -5,4 +5,4 @@ Ladda ner den fulla versionen och börja lägg till de komponenter du behöver.<
 Denna boilerplate kommer med fullt funktionerande <em>Access Control Library</em> för att hantera användare/roller/tillstånd.</p>
 <p>Tänk på att detta repo fortfarande utvecklas och att det kan förekomma buggar och fel som ännu inte upptäckts. Jag ska göra mitt bästa för att förebygga detta.</p>
 <p>Hoppas att du tycker om detta projekt som jag lagt ner så mycket tid i. Besök repots <a href="https://github.com/rappasoft/laravel-5-boilerplate" target="_blank">GitHub</a> för att få mer information och rapportera gärna dina tankar/fel som <a href="https://github.com/rappasoft/Laravel-5-Boilerplate/issues" target="_blank">"issues" här</a>.</p>
-<p>- Anthony Rappa</p>
+<p>- Patrick Mutwiri</p>

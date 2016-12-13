@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Auth;
 
 class Blog extends Model
 {
@@ -73,23 +74,28 @@ class Blog extends Model
     }
     public function getImageAttribute()
     {
-        $user = User::find($this->id);
-        // preg_match_all('/<img[^>]+>/i', $this->body, $images);
-        preg_match('/< *img[^>]*src *= *["\']?([^"\']*)/i', $this->body, $image);
-        //$image[0] contains the full IMG tag, and $image[1] contains the source URI 
+        if (Auth::check()) {
+            $user = User::find($this->id);
+            // preg_match_all('/<img[^>]+>/i', $this->body, $images);
+            preg_match('/< *img[^>]*src *= *["\']?([^"\']*)/i', $this->body, $image);
+            //$image[0] contains the full IMG tag, and $image[1] contains the source URI 
 
-        if (isset($image[1])):
-            $img = $image[1];
-            // return $img;
-            // return $img[0][0];
-            // return var_dump($img[0]);
-        elseif ($user):
-            $user_image = $user->image;
-        $img = $user_image; else:
-            $img = '/assets/img/world.png';
-        endif;
+            if (isset($image[1])):
+                $img = $image[1];
+                // return $img;
+                // return $img[0][0];
+                // return var_dump($img[0]);
+            elseif ($user):
+                $user_image = $user->image;
+            $img = $user_image; else:
+                $img = 'assets/img/world.png';
+            endif;
+            
+            return $img;
+        } else {
+            return 'assets/img/world.png';
+        }
         
-        return $img;
     }
     public function getImagesAttribute()
     {

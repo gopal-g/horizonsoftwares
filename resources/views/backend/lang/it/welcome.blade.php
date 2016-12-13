@@ -17,5 +17,5 @@
     per ulteriori informazioni e per segnalare qualsiasi <a href="https://github.com/rappasoft/Laravel-5-Boilerplate/issues" target="_blank">problema</a>.
 </p>
 <p>
-    Anthony Rappa
+    Patrick Mutwiri
 </p>

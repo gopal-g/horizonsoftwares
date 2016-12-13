@@ -34,9 +34,9 @@
 	                <div class="title col-sm-8">
 	                    <a href="{{ route('blog.show', $blog->slug) }}" class="read_more">{{ $blog->title }}</a>
 		                <br>
-		                <?php $d = Date::parse($blog->created_at); ?>
+		                <?php $d = $blog->created_at; ?>
 		                <div class="author">
-		                    By <a href="{{ route('users.show', $blog->user->username) }}">{{ $blog->user->name() }}</a> 
+		                    By <a href="{{ route('frontend.user.profile.update', $blog->user->username) }}">{{ $blog->user->name }}</a> 
 		                    <span class="updated_at">{{ $d->format('d M Y') }}</span>
 		                </div>
 
@@ -44,7 +44,7 @@
 		                  @foreach($blog->tags as $tagg)
 		                  <a href="{{ route('tags.show', $tagg->slug) }}"><span class="badge">{{ $tagg->name }}</span></a>
 		                  @endforeach
-		                  <span class="stars"><i class="icon icon-star"></i>{{ $blog->starsCount() }}</span>
+		                  <span class="stars"><i class="icon icon-star"></i>{{ $blog->starsCount }}</span>
 		                </div>
 	                </div>
 	            </div>
@@ -71,10 +71,11 @@
 	        @if (isset($blogs) && count($blogs))
 	        
 	        <?php
-			    $trending = Article::select(DB::raw('blogs.*, count(*) as `aggregate`'))
+			    /*$trending = Article::select(DB::raw('blogs.*, count(*) as `aggregate`'))
 				    ->join('stars', 'blogs.id', '=', 'stars.blog_id')
 				    ->groupBy('blog_id')
-				    ->orderBy('aggregate', 'desc')->paginate(10);
+				    ->orderBy('aggregate', 'desc')->paginate(10);*/
+				    
 		    ?>
 
 	        @foreach($trending as $blog)
@@ -92,9 +93,9 @@
 	                <div class="title col-sm-8">
 	                    <a href="{{ route('blog.show', $blog->slug) }}" class="read_more">{{ $blog->title }}</a>
 		                <br>
-		                <?php $d = Date::parse($blog->created_at); ?>
+		                <?php $d = $blog->created_at; ?>
 		                <div class="author">
-		                    By <a href="{{ route('users.show', $blog->user->username) }}">{{ $blog->user->name() }}</a> 
+		                    By <a href="{{ route('frontend.user.profile.update', $blog->user->username) }}">{{ $blog->user->name() }}</a> 
 		                    <span class="updated_at">{{ $d->format('d M Y') }}</span>
 		                </div>
 

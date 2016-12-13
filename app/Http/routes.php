@@ -42,6 +42,9 @@ $router->controller('tests', 'TestsController');
  */
 $router->resource('tours', 'ToursController');
 
+//enq
+Route::post('enquire',  ['as'=>'enquiry.store', 'uses' => 'saveEnquiries@store']);
+
 Route::group(['middleware' => 'web'], function () {
 	Route::get('account/facebook/api', ['uses' => 'RegistrationController@redirect', 'as' => 'facebook.redirect']);
 	Route::get('account/facebook', ['uses' => 'RegistrationController@facebook', 'as' => 'facebook']);

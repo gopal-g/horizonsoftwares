@@ -1,7 +1,6 @@
 
 <!-- - - - - - - - - - - - - - Footer - - - - - - - - - - - - - - - - -->
 
-
 <footer id="footer">
     
     <section class="section padding-bottom-off">
@@ -53,14 +52,19 @@
 
                 <div class="col-md-6 opacity">
                     <h2>CONTACT US / REQUEST A QUOTE</h2>
-                    <form action="contact"  method="post" class="contact-form">
+                    <form action="{{ route('enquiry.store') }}"  method="post" class="contact-form">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                        <!-- <input type="hidden" name="ip_address" value="{{ Request::ip() }}" /> -->
                         <p class="input-block">
                             <input type="text" name="name" id="name" placeholder="Name *" required="required" value="{{ Request::old('name') }}" />
                         </p>
 
                         <p class="input-block">
                             <input type="email" name="email" id="email" placeholder="Email *" required="required" value="{{ Request::old('email') }}" />
+                        </p>
+
+                        <p class="input-block">
+                            <input type="number" name="phone" id="phone" placeholder="Phone *" required="required" value="{{ Request::old('phone') }}" />
                         </p>
 
                         <p class="input-block">
@@ -99,17 +103,19 @@
     <div class="bottom-footer clearfix">
 
         <div class="copyright">
-            <div class="hide">
+            <div class="xhide">
                 <a href="{{ route('blog.create') }}">Write</a> &#8226; 
                 <a href="{{ route('frontend.home') }}#contact">Contact Us</a> &#8226; 
+
                 @if(Auth::check())
-                    @if(Request::url() == route('users.show', Auth::getUser()->username))
+                    @if(Request::url() == route('frontend.user.profile.update', Auth::getUser()->username))
                         <a href="{{ route('logout') }}">Log Out</a> &#8226; 
                     @else
-                        <a href="{{ route('users.show', Auth::getUser()->username) }}">My Profile</a> &#8226; 
+                        <a href="{{ route('frontend.user.profile.update', Auth::getUser()->username) }}">My Profile</a> &#8226; 
                     @endif
-                    @if(isAdmin())
-                        <a href="{{ route('admin.blog') }}">Admin</a> &#8226; 
+
+                    @if(Auth::user()->name !== '')
+                        <a href="{{ route('admin.dashboard') }}">Admin</a> &#8226; 
                     @endif
                 @else
                     <a href="#signin" data-toggle="modal">Log In</a> &#8226; 
@@ -117,12 +123,12 @@
             </div>
             <a href="{{ route('frontend.home') }}">Horizon Softwares</a> © 2014-2016. All rights reserved.
         </div><!--/ .cppyright-->
-
+        
         <ul class="social-icons">
-            <li class="twitter"><a href="https://twitter.com/h_softwares"><i class="icon-twitter"></i>Twitter</a></li>
-            <li class="facebook"><a href="https://www.facebook.com/horizonsoftwareske"><i class="icon-facebook"></i>Facebook</a></li>
-            <li class="linkedin"><a href="https://www.linkedin.com/company/horizon-softwares"><i class="icon-linkedin"></i>LinkedIn</a></li>
-            <li class="youtube"><a href="https://www.youtube.com/channel/UCUQG1j0UaGfkaTdiwKYdYQA"><i class="icon-youtube"></i>Youtube</a></li>
+            <li class="twitter"><a target="_blank" href="https://twitter.com/h_softwares"><i class="icon-twitter"></i>Twitter</a></li>
+            <li class="facebook"><a target="_blank" href="https://www.facebook.com/horizonsoftwareske"><i class="icon-facebook"></i>Facebook</a></li>
+            <li class="linkedin"><a target="_blank" href="https://www.linkedin.com/company/horizon-softwares"><i class="icon-linkedin"></i>LinkedIn</a></li>
+            <li class="youtube"><a target="_blank" href="https://www.youtube.com/channel/UCUQG1j0UaGfkaTdiwKYdYQA"><i class="icon-youtube"></i>Youtube</a></li>
         </ul><!--/ .social-icons-->
 
     </div><!--/ .bottom-footer-->   

@@ -48,6 +48,7 @@
                                 <a href="{{URL::route('facebook.redirect')}}" class="btn btn-primary" style="background-color: #3b5998"><i class="fa fa-facebook"></i>
                                         Log In via Facebook </a>
                             </div>
+                            <div class="fb-login-button" data-max-rows="3" data-size="large" data-show-faces="true" data-auto-logout-link="true"></div>
                         </div><!--form-group-->
 
                     {!! Form::close() !!}

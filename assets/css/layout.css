@@ -74,7 +74,7 @@
 
 				.navigation ul li > a {
 					padding: 10px 15px;
-					background-color: #00c2a9;
+					background-color: #32cd32;
 					color: #fff;
 					cursor: pointer;
 					font-weight: 400;
@@ -89,7 +89,7 @@
 				.navigation ul .current_page_parent > a,
 				.navigation ul .current_page_ancestor > a { 
 					background-color: #fff;
-					 color: #00c2a9;
+					 color: #32cd32;
 				}
 
 				.navigation ul a {
@@ -105,7 +105,7 @@
 				.navigation ul .current-menu-ancestor > a:after,
 				.navigation ul .current_page_item > a:after,
 				.navigation ul .current_page_parent > a:after,
-				.navigation ul .current_page_ancestor > a:after { color: #00c2a9; }
+				.navigation ul .current_page_ancestor > a:after { color: #32cd32; }
 
 			/* Dropdown */
 			
@@ -125,7 +125,7 @@
 				.navigation ul ul .current-menu-ancestor > a,
 				.navigation ul ul .current_page_item > a,
 				.navigation ul ul .current_page_parent > a,
-				.navigation ul ul .current_page_ancestor > a { color: #00c2a9; }
+				.navigation ul ul .current_page_ancestor > a { color: #32cd32; }
 				
 		/* -------------------------------------------------- */
 		/* Slides
