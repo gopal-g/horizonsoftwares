@@ -5,6 +5,9 @@
 
 Homestead.yaml
 Homestead.json
+sitemap.xml
+*.tar.gz
+google1fad0eb67e2af3f9.html
 .env
 /tours
 /public/css/frontend.css
